@@ -207,7 +207,7 @@ const menuData = {
                 name: "Fufu with Soup",
                 price: 179,
                 description: "Soft traditional fufu served with flavorful African soup.",
-                image: "images/Fufu with Soup.jpeg"
+                image: "images/Fufu With Soup.jpeg"
             },
             {
                 name: "South African Bunny Chow",
