@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Aam | Modern Asian Dining</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LUXURY HEADER -->
+<header class="header">
+
+    <!-- BRAND LOGO -->
+    <a href="#home" class="logo">
+        <span class="logo-main">AIM AAM</span>
+        <span class="logo-sub">MODERN ASIAN DINING</span>
+    </a>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#home">HOME</a>
+        <a href="#regionSelection">MENU</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <!-- MENU BUTTON -->
+    <a href="#regionSelection" class="header-menu-button">
+        VIEW MENU <span>↗</span>
+    </a>
+
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero-section" id="home">
+
+    <div class="hero-content">
+
+        <span>WELCOME TO AIM AAM</span>
+
+        <h1>Good Food.<br>Good Mood.</h1>
+
+        <p>
+            Discover delicious flavors from around the world,
+            made fresh for every moment.
+        </p>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="images/hero-food.jpeg" alt="Aim Aam Delicious Food">
+    </div>
+
+</section>
+
+<!-- MENU HEADING -->
+<div class="menu-heading">
+    <span>OUR MENU</span>
+    <h2>Explore Our Menu</h2>
+    <p>Discover Flavors Around the World</p>
+    <div class="menu-heading-line"></div>
+</div>
+
+   <!-- REGION SELECTION -->
+<div class="food-grid" id="regionSelection">
+
+    <!-- ASIAN CUISINE -->
+    <div class="food-card region-card" data-region="asian">
+
+        <img src="images/Asian Cuisine.jpeg" alt="Asian Cuisine">
+
+        <div class="food-info">
+            <h3>Asian Cuisine</h3>
+            <p>
+                Discover traditional and modern flavors
+                from across Asia.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- EUROPEAN CUISINE -->
+    <div class="food-card region-card" data-region="european">
+
+        <img src="images/European Cuisine.jpeg" alt="European Cuisine">
+
+        <div class="food-info">
+            <h3>European Cuisine</h3>
+            <p>
+                Explore delicious dishes inspired
+                by European cultures.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- AFRICAN CUISINE -->
+    <div class="food-card region-card" data-region="african">
+
+        <img src="images/African Cuisine.jpeg" alt="African Cuisine">
+
+        <div class="food-info">
+            <h3>African Cuisine</h3>
+            <p>
+                Experience rich spices and authentic
+                African flavors.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+      <!-- REGION MENU CONTENT -->
+<div id="regionContent" class="region-content" style="display: none;">
+
+    <button id="backToRegions" class="back-button">
+        ← Back to Regions
+    </button>
+
+    <div id="regionTitle"></div>
+
+    <div class="region-layout">
+
+        <!-- FOOD MENU -->
+        <div class="region-food-area">
+            <div id="regionFoodGrid" class="food-grid"></div>
+        </div>
+
+        <!-- MY CART -->
+        <section class="cart-section" id="cart">
+
+            <div class="cart-heading">
+                <span>YOUR ORDER</span>
+                <h2>My Cart</h2>
+                <p>Review your selected dishes before checkout.</p>
+            </div>
+
+            <div class="cart-container">
+
+                <div id="cartItems">
+                    <p class="empty-cart">
+                        Your cart is currently empty.
+                    </p>
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+
+                    <div class="cart-total-row">
+                        <span>Total</span>
+                        <span id="cartTotal">฿0</span>
+                    </div>
+
+                    <button id="checkoutButton" class="checkout-button" disabled>
+                        Proceed to Checkout
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+    <!-- =================================
+     CHECKOUT SECTION
+================================= -->
+
+<section class="checkout-section" id="checkout" style="display: none;">
+
+    <div class="checkout-heading">
+        <span>COMPLETE YOUR ORDER</span>
+        <h2>Checkout</h2>
+        <p>Please enter your information to continue.</p>
+    </div>
+
+    <div class="checkout-container">
+
+        <div class="checkout-form">
+
+            <h3>Customer Information</h3>
+
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" placeholder="Enter your name">
+
+            <label for="customerPhone">Phone Number</label>
+            <input type="tel" id="customerPhone" placeholder="Enter your phone number">
+
+            <div class="checkout-divider"></div>
+
+            <h3>How would you like to receive your order?</h3>
+
+            <label for="orderType">Order Type</label>
+            <select id="orderType">
+                <option value="">Select order type</option>
+                <option value="dine-in">Dine-in</option>
+                <option value="takeaway">Takeaway</option>
+                <option value="delivery">Delivery</option>
+            </select>
+
+            <!-- DINE-IN DETAILS -->
+            <div id="dineInDetails" style="display: none;">
+                <label for="tableNumber">Table Number</label>
+                <input type="text" id="tableNumber" placeholder="Enter your table number">
+            </div>
+
+            <!-- TAKEAWAY DETAILS -->
+            <div id="takeawayDetails" style="display: none;">
+                <label for="pickupTime">Pickup Time</label>
+                <input type="time" id="pickupTime">
+            </div>
+
+            <!-- DELIVERY DETAILS -->
+            <div id="deliveryDetails" style="display: none;">
+                <label for="deliveryAddress">Delivery Address</label>
+                <textarea id="deliveryAddress" placeholder="Enter your full delivery address"></textarea>
+            </div>
+
+            <button type="button" id="placeOrderButton">
+                Place Order
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+
+    <div class="about-content">
+
+        <span class="about-label">ABOUT AIM AAM</span>
+
+        <h2>More Than Just Food,<br>
+            It's an Experience.</h2>
+
+        <p>
+            Aim Aam is a modern dining destination that brings
+            together delicious flavors from different cultures.
+            We believe that good food connects people and creates
+            memorable experiences.
+        </p>
+
+        <p>
+            From the vibrant tastes of Asia to the classic flavors
+            of Europe and the rich culinary traditions of Africa,
+            we invite everyone to explore something new with us.
+        </p>
+
+        <div class="about-highlight">
+            <span>3 Regions</span>
+            <span>One Table</span>
+            <span>Endless Flavors</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CUSTOMER REVIEWS SECTION -->
+<section class="reviews-section" id="reviews">
+
+    <div class="reviews-heading">
+        <span>WHAT OUR CUSTOMERS SAY</span>
+        <h2>Guest Experiences</h2>
+        <p>Every visit creates a story. Share yours with us.</p>
+    </div>
+
+    <div class="reviews-container">
+
+        <!-- REVIEW FORM -->
+        <div class="review-form">
+
+            <h3>Share Your Experience</h3>
+
+            <label for="reviewName">Your Name</label>
+            <input
+                type="text"
+                id="reviewName"
+                placeholder="Enter your name"
+            >
+
+            <label>Rate Your Experience</label>
+
+            <div class="rating-stars" id="ratingStars">
+                <button type="button" data-rating="1" aria-label="1 star">★</button>
+                <button type="button" data-rating="2" aria-label="2 stars">★</button>
+                <button type="button" data-rating="3" aria-label="3 stars">★</button>
+                <button type="button" data-rating="4" aria-label="4 stars">★</button>
+                <button type="button" data-rating="5" aria-label="5 stars">★</button>
+            </div>
+
+            <label for="reviewComment">Your Review</label>
+            <textarea
+                id="reviewComment"
+                rows="5"
+                placeholder="Tell us about your dining experience..."
+            ></textarea>
+
+            <button type="button" id="submitReview">
+                SUBMIT REVIEW ↗
+            </button>
+
+        </div>
+
+        <!-- REVIEW DISPLAY -->
+        <div class="review-display">
+
+            <div class="review-summary">
+                <span class="review-average" id="reviewAverage">0.0</span>
+                <div>
+                    <div class="review-average-stars">★★★★★</div>
+                    <p id="reviewCount">No reviews yet</p>
+                </div>
+            </div>
+
+            <div id="reviewsList" class="reviews-list">
+                <p class="no-reviews">
+                    Be the first to share your experience.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT FOOTER -->
+<footer class="contact-section" id="contact">
+
+    <div class="footer-brand">
+        <h2>AIM AAM</h2>
+        <span>MODERN ASIAN DINING</span>
+        <p>Rangsit, Pathum Thani, Thailand</p>
+    </div>
+
+    <div class="footer-details">
+        <span>10:00 AM – 10:00 PM</span>
+        <span>Instagram: @aimaam</span>
+        <span>Facebook: Aim Aam</span>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 AIM AAM. ALL RIGHTS RESERVED.
+    </div>
+
+</footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
