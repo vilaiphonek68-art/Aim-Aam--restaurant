@@ -319,7 +319,11 @@ function showRegionMenu(region) {
         foodCard.className = "food-card";
 
         foodCard.innerHTML = `
-            <img src="${food.image || 'images/hero-food.jpeg'}" alt="${food.name}">
+           <img 
+    src="${food.image || 'images/hero-food.jpeg'}" 
+    alt="${food.name}"
+    onerror="console.log('Image failed:', this.src, 'Food:', this.alt)"
+>
 
             <div class="food-info">
                 <h3>${food.name}</h3>
