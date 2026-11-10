@@ -511,10 +511,13 @@ h1, h2, h3 {
 }
 
 
-/* REGION RESPONSIVE */
+/* =========================
+   REGION RESPONSIVE
+========================= */
 
 @media (max-width: 850px) {
     #regionSelection {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 18px;
     }
 
@@ -523,26 +526,14 @@ h1, h2, h3 {
     }
 
     .region-card .food-info {
-        padding: 20px 16px;
+        padding: 16px;
     }
 
     .region-card .food-info h3 {
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
-@media (max-width: 600px) {
-    #regionSelection {
-        grid-template-columns: 1fr;
-        max-width: 420px;
-        gap: 25px;
-        margin-top: 35px;
-    }
-
-    .region-card > img {
-        height: 230px;
-    }
-}
 /* =========================
    FOOD MENU CARDS
 ========================= */
@@ -605,20 +596,42 @@ h1, h2, h3 {
     margin-top: 15px;
 }
 
-/* FOOD MENU RESPONSIVE */
+/* =========================
+   FOOD MENU RESPONSIVE
+========================= */
 
 @media (max-width: 850px) {
     #regionFoodGrid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
     }
-}
 
-@media (max-width: 600px) {
-    #regionFoodGrid {
-        grid-template-columns: 1fr;
-        max-width: 420px;
-        margin: 0 auto;
+    #regionFoodGrid .food-card {
+        min-height: 400px;
+    }
+
+    #regionFoodGrid .food-card > img {
+        height: 160px;
+        min-height: 160px;
+    }
+
+    #regionFoodGrid .food-card .food-info {
+        padding: 12px;
+    }
+
+    #regionFoodGrid .food-card .food-info h3 {
+        font-size: 15px;
+        min-height: 50px;
+    }
+
+    #regionFoodGrid .food-card .food-info p {
+        font-size: 12px;
+        min-height: 65px;
+    }
+
+    #regionFoodGrid .food-card .add-cart-button {
+        font-size: 12px;
+        padding: 10px 5px;
     }
 }
 
