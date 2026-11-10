@@ -45,7 +45,7 @@ const menuData = {
                 name: "Chicken Satay",
                 price: 119,
                 description: "Grilled chicken skewers served with peanut sauce.",
-                image: "images/Chicken Stay.jpeg"
+                image: "images/Chicken Satay.jpeg"
             },
             {
                 name: "Japanese Sushi Set",
