@@ -1804,3 +1804,38 @@ h1, h2, h3 {
     </div>
 
 </section>
+/* =========================
+   COMPACT FOOD GRID WIDTH
+========================= */
+
+#regionFoodGrid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 220px)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    margin-right: auto !important;
+    justify-content: start !important;
+    align-items: start;
+}
+
+#regionFoodGrid .food-card {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+    #regionFoodGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        max-width: 100% !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 550px) {
+    #regionFoodGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+}
