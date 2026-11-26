@@ -1878,3 +1878,6 @@ h1, h2, h3 {
         gap: 15px;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
