@@ -1839,3 +1839,42 @@ h1, h2, h3 {
         gap: 10px !important;
     }
 }
+/* =========================
+   MENU PAGE - SIDE SPACING
+========================= */
+
+.region-layout {
+    width: calc(100% - 120px) !important;
+    max-width: 1250px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+    gap: 28px;
+}
+
+.region-food-area {
+    min-width: 0;
+    flex: 1;
+}
+
+/* Keep food cards inside their area */
+#regionFoodGrid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+    .region-layout {
+        width: calc(100% - 48px) !important;
+        gap: 18px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 550px) {
+    .region-layout {
+        width: calc(100% - 28px) !important;
+        gap: 15px;
+    }
+}
