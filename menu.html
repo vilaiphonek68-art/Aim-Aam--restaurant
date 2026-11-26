@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Aim Aam - Modern Asian Dining</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LUXURY HEADER -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-main">AIM AAM</span>
+            <span class="logo-sub">MODERN ASIAN DINING</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#contact">CONTACT</a>
+        </nav>
+
+        <a href="#regionSelection" class="header-menu-button">
+            VIEW MENU <span>↗️</span>
+        </a>
+
+    </header>
+
+    <!-- MENU HEADING -->
+    <div class="menu-heading">
+        <span>OUR MENU</span>
+        <h2>Explore Our Menu</h2>
+        <p>Discover Flavors Around the World</p>
+        <div class="menu-heading-line"></div>
+    </div>
+
+    <!-- REGION SELECTION -->
+    <div class="food-grid" id="regionSelection">
+
+        <div class="food-card region-card" data-region="asian">
+            <img src="images/Asian Cuisine.jpeg" alt="Asian Cuisine">
+            <div class="food-info">
+                <h3>Asian Cuisine</h3>
+                <p>Discover traditional and modern flavors from across Asia.</p>
+            </div>
+        </div>
+
+        <div class="food-card region-card" data-region="european">
+            <img src="images/European Cuisine.jpeg" alt="European Cuisine">
+            <div class="food-info">
+                <h3>European Cuisine</h3>
+                <p>Explore delicious dishes inspired by European cultures.</p>
+            </div>
+        </div>
+
+        <div class="food-card region-card" data-region="african">
+            <img src="images/African Cuisine.jpeg" alt="African Cuisine">
+            <div class="food-info">
+                <h3>African Cuisine</h3>
+                <p>Experience rich spices and authentic African flavors.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- REGION MENU CONTENT -->
+    <div id="regionContent" class="region-content" style="display: none;">
+
+        <button id="backToRegions" class="back-button">
+            ← Back to Regions
+        </button>
+
+        <div id="regionTitle"></div>
+
+        <div class="region-layout">
+
+            <div class="region-food-area">
+                <div id="regionFoodGrid" class="food-grid"></div>
+            </div>
+
+            <!-- SHOPPING CART -->
+            <section class="cart-section" id="cart">
+
+                <div class="cart-heading">
+                    <span>YOUR ORDER</span>
+                    <h2>My Cart</h2>
+                    <p>Review your selected dishes before checkout.</p>
+                </div>
+
+                <div class="cart-container">
+
+                    <div id="cartItems">
+                        <p class="empty-cart">
+                            Your cart is currently empty.
+                        </p>
+                    </div>
+
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+
+                        <div class="cart-total-row">
+                            <span>Total</span>
+                            <span id="cartTotal">฿0</span>
+                        </div>
+
+                        <button id="checkoutButton" class="checkout-button" disabled>
+                            Proceed to Checkout
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- CHECKOUT -->
+    <section class="checkout-section" id="checkout" style="display: none;">
+
+        <div class="checkout-heading">
+            <span>COMPLETE YOUR ORDER</span>
+            <h2>Checkout</h2>
+            <p>Please enter your information to continue.</p>
+        </div>
+
+        <div class="checkout-container">
+
+            <div class="checkout-form">
+
+                <h3>Customer Information</h3>
+
+                <label for="customerName">Full Name</label>
+                <input type="text" id="customerName" placeholder="Enter your name">
+
+                <label for="customerPhone">Phone Number</label>
+                <input type="tel" id="customerPhone" placeholder="Enter your phone number">
+
+                <div class="checkout-divider"></div>
+
+                <h3>How would you like to receive your order?</h3>
+
+                <label for="orderType">Order Type</label>
+                <select id="orderType">
+                    <option value="">Select order type</option>
+                    <option value="dine-in">Dine-in</option>
+                    <option value="takeaway">Takeaway</option>
+                    <option value="delivery">Delivery</option>
+                </select>
+
+                <div id="dineInDetails" style="display: none;">
+                    <label for="tableNumber">Table Number</label>
+                    <input type="text" id="tableNumber" placeholder="Enter your table number">
+                </div>
+
+                <div id="takeawayDetails" style="display: none;">
+                    <label for="pickupTime">Pickup Time</label>
+                    <input type="time" id="pickupTime">
+                </div>
+
+                <div id="deliveryDetails" style="display: none;">
+                    <label for="deliveryAddress">Delivery Address</label>
+                    <textarea id="deliveryAddress" placeholder="Enter your full delivery address"></textarea>
+                </div>
+
+                <button type="button" id="placeOrderButton">
+                    Place Order
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="contact-section">
+
+        <div class="footer-brand">
+            <h2>AIM AAM</h2>
+            <span>MODERN ASIAN DINING</span>
+            <p>Rangsit, Pathum Thani, Thailand</p>
+        </div>
+
+        <div class="footer-details">
+            <span>10:00 AM – 10:00 PM</span>
+            <span>Instagram: @aimaam</span>
+            <span>Facebook: Aim Aam</span>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 AIM AAM. ALL RIGHTS RESERVED.
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="menu-data.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+</html>
