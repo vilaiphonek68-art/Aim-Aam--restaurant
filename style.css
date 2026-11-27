@@ -1881,3 +1881,23 @@ h1, h2, h3 {
 html {
     scroll-behavior: smooth;
 }
+/* ABOUT SECTION - CENTER ALIGN */
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    text-align: center;
+}
+
+.about-content p {
+    text-align: center;
+}
+
+.about-stats {
+    justify-content: center;
+    text-align: center;
+}
